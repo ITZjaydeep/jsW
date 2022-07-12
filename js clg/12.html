@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      sen = prompt("Enter a String");
+      key = "a";
+      arr = sen.split("");
+      for (i = 0; i < arr.length; i++) {
+        if (key == arr[i]) {
+          first = i;
+          break;
+        }
+      }
+
+      for (j = arr.length - 1; j >= 0; j--) {
+        if (key == arr[j]) {
+          last = j;
+          break;
+        }
+      }
+
+      newStr = "";
+      k = first;
+
+      for (k = first + 1; k <= last - 1; k++) {
+        newStr += sen[k];
+      }
+
+      document.write(first + " " + last + " " + newStr);
+    </script>
+  </body>
+</html>

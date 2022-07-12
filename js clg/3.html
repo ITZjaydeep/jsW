@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      lower = parseInt(prompt("Enter the lower number:"));
+      higher = parseInt(prompt("Enter the higher number:"));
+      document.write("Prime numbers are : ");
+
+      for (i = lower; i <= higher; i++) {
+        let flag = false;
+        for (j = 2; j < i; j++) {
+          if (i % j == 0) {
+            flag = true;
+            break;
+          }
+        }
+        if (i > 1 && flag == false) {
+          document.write(i + " ");
+        }
+      }
+    </script>
+  </body>
+</html>
